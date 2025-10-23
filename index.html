@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JAR – Create Account</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#f8f4ef;
+      --bg-2:#f2eadf;
+      --bg-3:#e8dccb;
+      --ink:#3a342e;
+      --muted:#7a6f64;
+      --accent:#c5ad8b;
+      --accent-strong:#b69973;
+      --line:#d8cbb7;
+      --white:#ffffff;
+    }
+    * { box-sizing: border-box; }
+    html,body{
+      height: 100%;
+      margin: 0;
+      text-align:center;
+      position:center;
+      background: linear-gradient(180deg, var(--bg-1), var(--bg-3));
+      color: var(--ink);
+      font-family: "Cairo", system-ui, -apple-system, Segoe UI, Tahoma, Arial, sans-serif;
+    }
+    .wrap{
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card{
+      width: min(420px, 92vw);
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(58,52,46,.08);
+      overflow: hidden;
+    }
+    .hero{
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--line);
+      padding: 36px 28px 20px;
+      text-align: center;
+    }
+    .brand-en{
+      font-size: clamp(38px, 6vw, 56px);
+      letter-spacing: .18em;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .brand-ar{
+      margin-top: -4px;
+      font-size: clamp(40px, 6.5vw, 64px);
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .avatar{
+      width: 74px; height: 74px;
+      margin: 18px auto 6px;
+      border-radius: 50%;
+      background: var(--bg-3);
+      border: 2px solid var(--line);
+      display: grid; place-items: center;
+      color: var(--muted);
+      font-size: 28px;
+      user-select: none;
+    }
+    .body{
+      padding: 22px 24px 28px;
+    }
+    .field{
+      display: grid;
+      gap: 6px;
+      margin: 14px 0 18px;
+    }
+    .field label{
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .underline{
+      border: none;
+      outline: none;
+      background: transparent;
+      padding: 10px 2px 8px;
+      border-bottom: 2px solid var(--line);
+      font-size: 16px;
+      color: var(--ink);
+      transition: border-color .2s ease;
+    }
+    .underline::placeholder{ color: #9a8f84; }
+    .underline:focus{ border-color: var(--accent-strong); }
+    .btn{
+      width: 100%;
+      appearance: none;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+      color: var(--white);
+      font-weight: 700;
+      letter-spacing: .02em;
+      padding: 14px 16px;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(182,153,115,.25);
+      transition: transform .04s ease, filter .15s ease;
+    }
+    .btn:hover{ filter: brightness(1.03); }
+    .btn:active{ transform: translateY(1px); }
+    .alt{
+      text-align: center;
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .alt a{
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--ink);
+      padding-bottom: 1px;
+    }
+    .alt a:hover{ opacity: .9; }
+    .dots{
+      position: absolute;
+      inset-inline-end: 10px;
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      display: none;
+      gap: 10px;
+    }
+    .dot{
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--line);
+    }
+    @media (min-width: 980px){
+      .stage{
+        position: relative;
+        width: min(920px, 92vw);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+      .card{ margin-inline: auto; }
+      .dots{ display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="stage">
+      <section class="card" aria-label="Create Account">
+        <header class="hero">
+          <div class="brand-en">JAR</div>
+          <div class="brand-ar">جار</div>
+        </header>
+        <div class="avatar" aria-hidden="true">📍</div>
+        <div class="body">
+          <form action="#" method="post" novalidate>
+            <div class="field">
+              <label for="name">JAR - YOUR RIDE FROM / TO YOUR CAMPUS</label>
+            
+            </div>
+            <div class="field">
+              <label for="email">find , share and manage your university ride !</label>
+              
+            </div>
+            <div class="field" style="margin-top:22px;">
+              <button class="btn" type="submit">Create Account</button>
+            </div>
+            <p class="alt">
+              Already have an account?
+              <a href="#">Login</a>
+            </p>
+          </form>
+        </div>
+      </section>
+      <div class="dots" aria-hidden="true">
+        <span class="dot"></span>
+        <span class="dot" style="opacity:.8"></span>
+        <span class="dot" style="opacity:.6"></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
